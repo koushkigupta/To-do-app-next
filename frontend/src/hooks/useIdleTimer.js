@@ -1,16 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function useIdleTimer(onLogout) {
-  const IDLE_TIMEOUT = 10 * 60 * 1000; // 10 minutes
-  const COUNTDOWN_DURATION = 60; // 60 seconds countdown
-
+  const IDLE_TIMEOUT = 10 * 60 * 1000; 
+  const COUNTDOWN_DURATION = 60; 
   const [countdown, setCountdown] = useState(null);
 
   const idleTimeoutRef = useRef(null);
   const countdownIntervalRef = useRef(null);
   const countdownRef = useRef(countdown);
 
-  // Keep countdownRef updated with latest countdown
+
   useEffect(() => {
     countdownRef.current = countdown;
   }, [countdown]);
