@@ -27,12 +27,17 @@ export default function Login() {
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
-      <div className="card p-4 shadow" style={{ width: "100%", maxWidth: "400px" }}>
+      <div
+        className="card p-4 shadow"
+        style={{ width: "100%", maxWidth: "400px" }}
+      >
         <h3 className="text-center mb-4">Login</h3>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="username" className="form-label">Username</label>
+            <label htmlFor="username" className="form-label">
+              Username
+            </label>
             <input
               type="text"
               id="username"
@@ -44,7 +49,9 @@ export default function Login() {
           </div>
 
           <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
             <input
               type="password"
               id="password"

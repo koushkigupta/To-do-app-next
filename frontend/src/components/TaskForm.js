@@ -24,7 +24,7 @@ export default function TaskForm({ onNewTask }) {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
       onNewTask(res.data);

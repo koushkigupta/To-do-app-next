@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
 export default function Navbar() {
@@ -31,7 +33,7 @@ export default function Navbar() {
           {token && (
             <>
               <li className="nav-item">
-                <Link className="nav-link" href="/settings">
+                <Link className="nav-link" href="/">
                   Settings
                 </Link>
               </li>

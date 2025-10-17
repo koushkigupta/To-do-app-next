@@ -36,23 +36,22 @@ export default function Home() {
     }
   }, [token]);
 
-
   return (
-  <>
-  {token&&(
-    <div className="container mt-5" style={{ maxWidth: "600px" }}>
-      <h2 className="mb-4">Task List</h2>
+    <>
+      {token && (
+        <div className="container mt-5" style={{ maxWidth: "600px" }}>
+          <h2 className="mb-4">Task List</h2>
 
-      <TaskForm onNewTask={(task) => setTodos((prev) => [task, ...prev])} />
-      <TaskList todos={todos} setTodos={setTodos} />
+          <TaskForm onNewTask={(task) => setTodos((prev) => [task, ...prev])} />
+          <TaskList todos={todos} setTodos={setTodos} />
 
-      <AutoLogoutPopup
-        countdown={countdown}
-        onStay={stayLoggedIn}
-        onLogout={logout}
-      />
-    </div>
-  )}
-  </>
+          <AutoLogoutPopup
+            countdown={countdown}
+            onStay={stayLoggedIn}
+            onLogout={logout}
+          />
+        </div>
+      )}
+    </>
   );
 }

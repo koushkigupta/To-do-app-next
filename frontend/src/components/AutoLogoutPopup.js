@@ -18,8 +18,8 @@ const AutoLogoutPopup = ({ countdown, onStay, onLogout }) => {
           </div>
           <div className="modal-body">
             <p>
-              You will be logged out in <strong>{countdown}</strong> seconds due to
-              inactivity.
+              You will be logged out in <strong>{countdown}</strong> seconds due
+              to inactivity.
             </p>
           </div>
           <div className="modal-footer">
